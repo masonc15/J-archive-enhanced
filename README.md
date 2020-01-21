@@ -1,4 +1,4 @@
-# J-archive-enhanced
+# J! Archive Enhanced
 Chrome extension to add features to J! Archive
 
 ## Current features
