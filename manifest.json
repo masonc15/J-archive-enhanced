@@ -4,7 +4,10 @@
       "js": [
         "myscript.js"
       ],
-      "matches": ["*://*j-archive.com/search.php?*"]
+      "matches": [
+        "*://*.j-archive.com/search.php?*",
+        "*://j-archive.com/search.php?*"
+      ]
     }
   ],
   "description": "Shows Jeopardy answers on J-Archive",
