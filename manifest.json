@@ -1,15 +1,24 @@
 {
-"name":"Reveal J-Archive Answers",
-"description":"Shows Jeopardy answers on J-Archive",
-"version":"1",
-"icons": { "16": "jeopardy16.png",
-           "48": "jeopardy48.png",
-          "128": "jeopardy128.png" },
-"manifest_version":2,
-"content_scripts": [
+  "content_scripts": [
     {
-      "matches": ["http://www.j-archive.com/*", "http://j-archive.com/*"],
-      "js": ["myscript.js"]
+      "js": [
+        "myscript.js"
+      ],
+      "matches": [
+        "http://www.j-archive.com/*",
+        "http://j-archive.com/*",
+        "https://www.j-archive.com/*",
+        "https://j-archive.com/*"
+      ]
     }
-  ]
+  ],
+  "description": "Shows Jeopardy answers on J-Archive",
+  "icons": {
+    "16": "jeopardy16.png",
+    "48": "jeopardy48.png",
+    "128": "jeopardy128.png"
+  },
+  "manifest_version": 2,
+  "name": "J-Archive Plus",
+  "version": "1"
 }
