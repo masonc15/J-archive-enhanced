@@ -1,23 +1,22 @@
-if (window.location.href.startsWith('https://j-archive.com/showgame.php')) {
-    // Wait for the DOM to fully load
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.createElement('button');
-        toggleButton.textContent = 'Toggle All Answers';
-        document.body.insertBefore(toggleButton, document.body.firstChild);
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.getElementById('navbar'); // Assuming 'navbar' is the ID of the container
+    if (!navbar) {
+        console.error('Navbar element not found');
+        return;
+    }
 
-        toggleButton.addEventListener('click', function () {
-            const clues = document.querySelectorAll('#jeopardy_round .clue');
+    const toggleButton = document.createElement('button');
+    toggleButton.textContent = 'Toggle All Answers';
+    navbar.appendChild(toggleButton); // Append to a defined element
 
-            clues.forEach(function (clue) {
-                const correctResponse = clue.querySelector('.correct_response');
-                if (correctResponse) {
-                    if (correctResponse.style.display === 'none' || correctResponse.style.display === '') {
-                        correctResponse.style.display = 'block';
-                    } else {
-                        correctResponse.style.display = 'none';
-                    }
-                }
-            });
+    toggleButton.addEventListener('click', function () {
+        const clues = document.querySelectorAll('#jeopardy_round .clue');
+
+        clues.forEach(function (clue) {
+            const correctResponse = clue.querySelector('.correct_response');
+            if (correctResponse) {
+                correctResponse.style.display = correctResponse.style.display === 'block' ? 'none' : 'block';
+            }
         });
     });
-}
+});
