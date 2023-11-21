@@ -2,7 +2,7 @@
   "content_scripts": [
     {
       "js": [
-        "myscript.js"
+        "searchAnswerToggle.js"
       ],
       "matches": [
         "*://*.j-archive.com/search.php?*",
