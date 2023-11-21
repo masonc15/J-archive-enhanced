@@ -8,6 +8,15 @@
         "*://*.j-archive.com/search.php?*",
         "*://j-archive.com/search.php?*"
       ]
+    },
+    {
+      "js": [
+        "gameAnswerToggle.js"
+      ],
+      "matches": [
+        "*://*.j-archive.com/showgame.php?*",
+        "*://j-archive.com/showgame.php?*"
+      ]
     }
   ],
   "description": "Shows Jeopardy answers on J-Archive",
