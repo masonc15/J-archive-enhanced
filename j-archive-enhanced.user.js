@@ -20,7 +20,7 @@
         button.style.right = '10px';
         button.style.zIndex = '1000';
         return button;
-    };
+    }
 
     // Toggle answers on search result pages
     const toggleSearchAnswers = function () {
@@ -40,7 +40,9 @@
         const correctResponses = document.querySelectorAll('.correct_response');
         correctResponses.forEach(function (correctResponse) {
             const clueTextTd = correctResponse.closest('tr').querySelector('.clue_text');
-            if (!clueTextTd) return;
+            if (!clueTextTd) {
+                return;
+            }
 
             const answerElement = clueTextTd.querySelector('.answer-text');
             if (answerElement) {
@@ -74,7 +76,7 @@
         navbar.appendChild(button);
         button.addEventListener('click', toggleSearchAnswers);
     } else if (window.location.pathname.includes('/showgame.php')) {
-        const body = document.body;
+        const { body } = document;
         if (!body) {
             console.error('Body element not found');
             return;
