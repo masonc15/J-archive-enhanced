@@ -9,3 +9,15 @@
 // ==/UserScript==
 
 (function () {
+    'use strict';
+
+    // Helper function to create a toggle button
+    function createToggleButton() {
+        const button = document.createElement('button');
+        button.textContent = 'Show/Hide all answers';
+        button.style.position = 'fixed';
+        button.style.top = '10px';
+        button.style.right = '10px';
+        button.style.zIndex = '1000';
+        return button;
+    }
