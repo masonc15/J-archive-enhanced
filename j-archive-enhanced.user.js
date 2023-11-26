@@ -12,7 +12,7 @@
     'use strict';
 
     // Helper function to create a toggle button
-    function createToggleButton() {
+    const createToggleButton = function () {
         const button = document.createElement('button');
         button.textContent = 'Show/Hide all answers';
         button.style.position = 'fixed';
@@ -20,10 +20,10 @@
         button.style.right = '10px';
         button.style.zIndex = '1000';
         return button;
-    }
+    };
 
     // Toggle answers on search result pages
-    function toggleSearchAnswers() {
+    const toggleSearchAnswers = function () {
         const answers = document.querySelectorAll('.search_correct_response');
         if (answers.length === 0) {
             console.error('No answer elements found');
@@ -33,10 +33,10 @@
         answers.forEach(el => {
             el.style.visibility = isVisible ? 'hidden' : 'visible';
         });
-    }
+    };
 
     // Toggle answers on game pages
-    function toggleGameAnswers() {
+    const toggleGameAnswers = function () {
         const correctResponses = document.querySelectorAll('.correct_response');
         correctResponses.forEach(function (correctResponse) {
             const clueTextTd = correctResponse.closest('tr').querySelector('.clue_text');
@@ -61,7 +61,7 @@
                 clueTextTd.appendChild(answerElement);
             }
         });
-    }
+    };
 
     // Add the button and set up event listeners depending on the page
     if (window.location.pathname.includes('/search.php')) {
