@@ -5,18 +5,8 @@ window.onload = function () {
         return;
     }
 
-    const toggleButton = document.createElement('button');
-    toggleButton.textContent = 'Toggle All Answers';
-    navbar.appendChild(toggleButton); // Append to a defined element
-
-    toggleButton.addEventListener('click', function () {
-        const clues = document.querySelectorAll('#jeopardy_round .clue');
-
-        clues.forEach(function (clue) {
-            const correctResponse = clue.querySelector('.correct_response');
-            if (correctResponse) {
-                correctResponse.style.display = correctResponse.style.display === 'block' ? 'none' : 'block';
-            }
-        });
+  const button = document.createElement('button');
+  button.id = 'toggleAnswersBtn';
+  button.textContent = 'Show/Hide all answers';
     });
 });
