@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const navbar = document.getElementById('navbar'); // Assuming 'navbar' is the ID of the container
+// Wait for the window to load before executing the script
+window.onload = function () {
     if (!navbar) {
         console.error('Navbar element not found');
         return;
