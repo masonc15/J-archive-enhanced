@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         J-Archive Plus Enhanced
+// @name         J-Archive Enhanced
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Shows Jeopardy answers on J-Archive more efficiently
