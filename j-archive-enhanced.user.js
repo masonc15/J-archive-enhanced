@@ -63,3 +63,24 @@
         });
     }
 
+    // Add the button and set up event listeners depending on the page
+    if (window.location.pathname.includes('/search.php')) {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) {
+            console.error('Navbar element not found');
+            return;
+        }
+        const button = createToggleButton();
+        navbar.appendChild(button);
+        button.addEventListener('click', toggleSearchAnswers);
+    } else if (window.location.pathname.includes('/showgame.php')) {
+        const body = document.body;
+        if (!body) {
+            console.error('Body element not found');
+            return;
+        }
+        const button = createToggleButton();
+        body.appendChild(button);
+        button.addEventListener('click', toggleGameAnswers);
+    }
+})();
