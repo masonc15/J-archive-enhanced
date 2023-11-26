@@ -17,7 +17,7 @@ J-Archive Enhanced is a Tampermonkey userscript designed to improve the experien
    - [Tampermonkey for Firefox](https://tampermonkey.net/?ext=dhdg&browser=firefox)
    - [Tampermonkey for Safari](https://tampermonkey.net/?ext=dhdg&browser=safari)
    - Other browsers may also support Tampermonkey.
-2. Download the `J-Archive_Plus_Enhanced.user.js` script.
+2. Download the `j-archive-enhanced.user.js` script.
 3. Open Tampermonkey's dashboard in your browser.
 4. Click on the "Utilities" tab.
 5. Under "Import -> From File", choose the downloaded script.
