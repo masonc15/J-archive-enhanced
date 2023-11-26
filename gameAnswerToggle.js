@@ -12,5 +12,6 @@ window.onload = function () {
 
   // Ensure the button is appended to a visible container
   navbar.appendChild(button);
+    const correctResponses = document.querySelectorAll('.correct_response');
     });
 });
