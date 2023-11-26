@@ -1,6 +1,6 @@
 // Wait for the window to load before executing the script
 window.onload = function () {
-  const body = document.body;
+  const { body } = document;
   if (!body) {
     console.error('Body element not found');
     return;
