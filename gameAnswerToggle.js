@@ -1,17 +1,21 @@
 // Wait for the window to load before executing the script
 window.onload = function () {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) {
-    console.error('Navbar element not found');
+  const body = document.body;
+  if (!body) {
+    console.error('Body element not found');
     return;
   }
 
   const button = document.createElement('button');
   button.id = 'toggleAnswersBtn';
   button.textContent = 'Show/Hide all answers';
+  button.style.position = 'fixed';
+  button.style.top = '10px';
+  button.style.right = '10px';
+  button.style.zIndex = '1000';
 
   // Ensure the button is appended to a visible container
-  navbar.appendChild(button);
+  body.appendChild(button);
 
   button.addEventListener('click', function () {
     const correctResponses = document.querySelectorAll('.correct_response');
